@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌈🧶🤣👟</title>
+    <style>
+        /* Import czcionek bez zmian */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap');
+
+        body {
+            background-color: #000;
+            background-image: url('https://i.pinimg.com/originals/ef/5e/4b/ef5e4b4d024c66b42311e337ae8ab4cc.gif');
+            background-size: 100% 50vh; /* ZMNIEJSZONO WYSOKOŚĆ PŁOMIENI */
+            background-position: bottom center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden; /* ZMIANA: Zapobiega poziomemu przewijaniu */
+        }
+
+        .copyright {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: 'Libre Barcode 128 Text', cursive;
+            font-size: 24px;
+            opacity: 0.7;
+        }
+
+        .main-container {
+            margin-top: 50px;
+            text-align: center;
+            z-index: 1;
+            width: 100%;
+            padding: 0 20px; /* Dodano padding, żeby tekst nie dotykał krawędzi */
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-family: "M PLUS 1", sans-serif;
+            font-size: 5rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin: 0 0 40px 0;
+            letter-spacing: 1px;
+            color: #ff0000;
+        }
+
+        .content-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            padding: 20px;
+            flex-wrap: wrap; 
+        }
+
+        .cat-section {
+            position: relative;
+            /* ZMIANA: Szerokość jest teraz elastyczna */
+            max-width: 400px; /* Maksymalna szerokość jak wcześniej */
+            width: 90%;       /* Na mniejszych ekranach zajmie 90% szerokości */
+        }
+
+        .cat-image {
+            display: block; /* Poprawia renderowanie obrazka */
+            width: 100%;    /* Obrazek zawsze dopasuje się do kontenera */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .cat-text {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .arrow {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            bottom: 50px;
+            /* ZMIANA: Pozycjonowanie strzałki poprawione */
+            left: 50%; 
+            transform: translateX(-20%) rotate(-30deg); /* Lepsze dopasowanie */
+            filter: brightness(0) invert(1);
+        }
+
+        .bordle-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+        }
+        
+        .bordle-section:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .bordle-image {
+            /* ZMIANA: Szerokość jest teraz elastyczna */
+            max-width: 300px; /* Maksymalna szerokość */
+            width: 100%;      /* Dopasuje się do kontenera */
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .bordle-title {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .bordle-subtitle {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-top: 10px;
+        }
+        
+        /* Media Queries dla mniejszych ekranów - ULEPSZONE */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.8rem; /* Nieco mniejszy tekst na telefonie */
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            .content-grid {
+                flex-direction: column; /* Elementy jeden pod drugim */
+                gap: 40px; /* Mniejszy odstęp */
+            }
+            /* .cat-section ma już elastyczną szerokość, więc nie trzeba go tu zmieniać */
+            
+            .arrow {
+                left: 60%; /* Lepsze pozycjonowanie na telefonie */
+                bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-container">
+        <h1>BAJGIEL.FUN</h1>
+        <h2>NAJGORSZA STRONA W INTERNECIE</h2>
+    </header>
+
+    <main class="content-grid">
+        <div class="cat-section">
+            <img src="dwakoty.jpg" alt="Dwa koty" class="cat-image">
+            <div class="cat-text">
+                <img src="szczalka.png" alt="Biała strzałka" class="arrow">
+                to jest chyba bajgiel
+            </div>
+        </div>
+
+        <a href="http://bordle.bajgiel.fun" target="_blank" class="bordle-section">
+            <img src="boring.png" alt="Gra Bordle" class="bordle-image">
+            <div class="bordle-title">BORDLE</div>
+            <div class="bordle-subtitle">(tak to moja nędzna gra)</div>
+        </a>
+    </main>
+
+    <div class="copyright">
+        copyrighted by bajgiel fun
+    </div>
+</body>
+</html>
